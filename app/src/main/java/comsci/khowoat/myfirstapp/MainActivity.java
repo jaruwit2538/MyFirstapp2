@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,12 +36,24 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0;i<detailStrings.length;i++){//เริ่มนับตั้งแต่ตัวแรกถึงตัวที่30แล้วตัดคำ
             shortStrings[i]=detailStrings[i].substring(0,29)+"...";//นับถึง30ตัวแล้วโยนจาก detailStrings ไป shortStrings หลังข้อความจะแสดงว่า ...
 
-
         }//end for
 
         //create listview
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this, ints, titleStrings, shortStrings);
+        MyAdapter myAdapter = new MyAdapter(MainActivity.this, ints, titleStrings, shortStrings);//ตัวแปรที่ใช้ในหน้านี้
         listView.setAdapter(myAdapter);
+
+        //active when click listview ลิ้งไปหน้า detail เมื่อคลิ้กเลือก item
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {//เมื่อมีการคลิ้ก้อมูลตำแหน่งใด จะเก็บตำแหน่งข้อมูลจากการคลิ้ก
+                Intent intent = new Intent(MainActivity.this,Detail.class);//ประกาศเรียกใช้ object .this คืออ้างถึง activity ที่ใช้ปัจจุบัน ส่งข้อมูลจากหน้า main ไปหน้า detail
+                intent.putExtra("Title", titleStrings[position]);
+                intent.putExtra("Detail",detailStrings[position]);
+                intent.putExtra("Image",ints[position]);
+                startActivity(intent);
+            }
+        });
+
     }   //Main Method onCreate
 
     public void onClickMoreinfo(View view) {
