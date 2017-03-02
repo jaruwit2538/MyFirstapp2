@@ -22,7 +22,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtTitleLiv"
             android:textSize="@dimen/h2"
-            android:textColor="?attr/actionModeSplitBackground" />
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:text="TextView"
@@ -30,6 +32,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtDetailLiv"
             android:textSize="@dimen/h3"
-            android:textColor="?attr/actionMenuTextColor" />
+            android:textColor="@android:color/holo_red_dark"
+            android:elevation="0dp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 </LinearLayout>

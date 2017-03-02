@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="title">
-        <item>หัวข้อที่1</item>
-        <item>หัวข้อที่2</item>
-        <item>หัวข้อที่3</item>
-        <item>หัวข้อที่4</item>
-        <item>หัวข้อที่5</item>
+        <item>ป้าย ห้ามเลี้ยวซ้าย \nNo left turn</item>
+        <item>ป้าย ห้ามเลี้ยวขวา \nNo right turn</item>
+        <item>ป้าย เดินรถทางเดียว \nAhead only</item>
+        <item>ป้าย ให้เลี้ยวขวา \nTurn right ahead</item>
+        <item>ป้าย ให้เลี้ยวซ้าย \nTurn left ahead</item>
         <item>หัวข้อที่6</item>
         <item>หัวข้อที่7</item>
         <item>หัวข้อที่8</item>
