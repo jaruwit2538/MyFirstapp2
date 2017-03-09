@@ -51,12 +51,12 @@ public class MyAdapter extends BaseAdapter{
         View view1 =layoutInflater.inflate(R.layout.my_listview,parent,false);
 
         //Initial view ผูกไอดีของ view กับตัวแปร
-        ImageView imgview = (ImageView) view1.findViewById(R.id.imvicon);
+        ImageView imageView = (ImageView) view1.findViewById(R.id.imvicon);
         TextView titleTextView = (TextView) view1.findViewById(R.id.txtTitleLiv);
         TextView detailTextView = (TextView) view1.findViewById(R.id.txtDetailLiv);
 
         //ShowView เอาข้อมูลไปแสดงผลบนหน้า App
-        imgview.setImageResource(ints[position]);
+        imageView.setImageResource(ints[position]);
         titleTextView.setText(titleStrings[position]);
         detailTextView.setText(detailStrings[position]);
         return view1;

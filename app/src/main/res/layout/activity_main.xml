@@ -6,37 +6,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="comsci.khowoat.myfirstapp.MainActivity"
-    android:background="@drawable/bg40">
-
-    <Button
-        android:text="@string/Moreinfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickMoreinfo"
-        android:id="@+id/btnMoreinfo"
-        android:layout_centerInParent="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="false"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentStart="false" />
+    android:background="@drawable/bg40"
+    android:fadeScrollbars="true">
 
     <ListView
+        android:id="@+id/livTraffic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/layButton"
         android:layout_below="@+id/txtTitle"
-        android:layout_above="@+id/btnMoreinfo"
-        android:id="@+id/livTraffic"
-        android:background="#beffffff"
-        android:layout_margin="@dimen/my_margin" />
+        android:layout_margin="@dimen/my_margin"
+        android:background="#beffffff" />
 
     <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txttitle"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="@dimen/h1"
-        android:id="@+id/txtTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h2"
+        android:text="@string/txttitle"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/h1"
         android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMoreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_weight="1"
+            android:onClick="onClickMoreinfo"
+            android:text="@string/Moreinfo" />
+
+        <Button
+            android:id="@+id/btnAboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aboutme" />
+    </LinearLayout>
+
 </RelativeLayout>

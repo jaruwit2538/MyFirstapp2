@@ -5,11 +5,12 @@
     android:layout_height="wrap_content">
 
     <ImageView
+        android:id="@+id/imvicon"
         android:layout_width="@dimen/my_icon"
         android:layout_height="@dimen/my_icon"
-        app:srcCompat="@drawable/traffic_01"
-        android:id="@+id/imvicon"
-        android:layout_margin="@dimen/my_margin" />
+        android:layout_margin="@dimen/my_margin"
+        android:baselineAlignBottom="false"
+        app:srcCompat="@drawable/traffic_01" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,7 +24,8 @@
             android:id="@+id/txtTitleLiv"
             android:textSize="@dimen/h2"
             android:textColor="?attr/actionModeSplitBackground"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/h1" />
 
         <TextView
             android:text="TextView"
@@ -32,6 +34,7 @@
             android:id="@+id/txtDetailLiv"
             android:textSize="@dimen/h3"
             android:textColor="@android:color/holo_red_dark"
-            android:elevation="0dp" />
+            android:elevation="0dp"
+            android:layout_marginTop="@dimen/h3" />
     </LinearLayout>
 </LinearLayout>
