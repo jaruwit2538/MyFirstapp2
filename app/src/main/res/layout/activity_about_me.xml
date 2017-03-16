@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg40">
+
+    <TextView
+        android:id="@+id/txtTitleAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:text="@string/aboutme"
+        android:textSize="@dimen/h1" />
+
+    <ImageView
+        android:id="@+id/imvAbout"
+        android:layout_width="@dimen/my_picture"
+        android:layout_height="@dimen/my_picture"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/txtTitleAbout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        app:srcCompat="@drawable/jar1" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="clickBack"
+        android:text="Back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnAbout"
+        android:layout_below="@+id/imvAbout"
+        android:layout_margin="@dimen/my_margin"
+        android:background="#b4ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:onClick="clickBack"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/txtNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:text="@string/no" />
+
+            <TextView
+                android:id="@+id/txtAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:text="@string/Add" />
+
+            <TextView
+                android:id="@+id/txtFace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:onClick="onClickFace"
+                android:text="@string/face" />
+
+            <TextView
+                android:id="@+id/txtTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:text="@string/Tell" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

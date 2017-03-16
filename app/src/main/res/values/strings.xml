@@ -6,4 +6,15 @@
     <string name="Moreinfo">More Info</string>
 
     <string name="aboutme">About Me</string>
+
+    <string name="name"><b>ชื่อ-สกุล</b> : นาย จารุวิทย์  บุญมา</string>
+
+    <string name="no"><b>รหัส</b> : 5711020660011</string>
+
+    <string name="Add"><b>หลักสูตร</b> : วิทยาการคอมพิวเตอร์</string>
+
+    <string name="face"><b>Facebook</b> : Khowoat jaruwit</string>
+
+    <string name="Tell"><b>เบอร์โทรศัพท์</b> : 0823371350</string>
+
 </resources>
