@@ -26,8 +26,7 @@ public class AboutMe extends AppCompatActivity {
         //Toast onClick แสดงข้อความเมื่อคลิ้ก(แสดงชั่วคราว)
         final ImageView clickImageView = (ImageView) findViewById(R.id.imvAbout);
 
-        soundId = R.raw.sound1;
-        playsound(soundId);
+
 
         clickImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,19 +34,22 @@ public class AboutMe extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Hello My Name Is Khowoat",Toast.LENGTH_SHORT).show();
                 //show sound1 when click image เมื่อคลิ้กที่ภาพ
 
+                soundId = R.raw.sound1;
+                playsound(soundId);
             }
         });//สิ้นสุด Toast
 
         //Toast On LongClick แสดงข้อความเมืื่อคลิ้ก(4-5วินาที)
         ImageView longClickImageView = (ImageView) findViewById(R.id.imvAbout);
 
-        soundId = R.raw.sound2;
-        playsound(soundId);
+
 
         longClickImageView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 Toast.makeText(getApplicationContext(),"Thank Guy",Toast.LENGTH_LONG).show();
+                soundId = R.raw.sound2;
+                playsound(soundId);
 
                 return true;
             }
